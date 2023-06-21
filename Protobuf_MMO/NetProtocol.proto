@@ -1,0 +1,55 @@
+syntax="proto3";
+
+package SangoMMONetProtocol;
+
+//The Enum
+enum OperationCode{
+    Default = 1;
+    Login = 2;
+    Register = 3;
+    SyncPlayerData = 4;
+    SyncPlayerTransform = 5;
+    SyncPlayerAccount = 6;
+    AttackCommand = 7;
+    AttackDamage = 8;
+    ChooseAvater = 9;
+    ItemEnhance = 10;
+    MissionUpdate = 11;
+    Chat = 12;
+    Shop = 13;
+}
+
+enum MessageCommand{
+    OperationRequest = 1;
+    OperationResponse = 2;
+    EventData = 3;
+}
+
+enum ErrorCode{
+    Unknown_Error = 1;
+    Account_Data_Error = 2;
+    Server_Data_Error = 3;
+}
+
+enum ReturnCode{
+    Success = 1;
+    Fail = 2;
+    AccountOnline = 3;
+}
+
+//The MessageProtocol
+message SangoNetMessage{
+    MessageHead MessageHead = 1;
+    MessageBody MessageBody = 2;
+}
+
+message MessageHead{
+    OperationCode OperationCode = 1;
+    MessageCommand MessageCommand = 2;
+    ErrorCode ErrorCode = 3;
+}
+
+message MessageBody{
+    string MessageString = 1;
+    ReturnCode ReturnCode = 2;
+}
