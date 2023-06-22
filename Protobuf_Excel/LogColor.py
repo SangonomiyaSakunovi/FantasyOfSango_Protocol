@@ -17,19 +17,24 @@ FOREGROUND_YELLOW = 0x0e
 std_out_handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 
 # Public
-def PrintGreen(mess):
+def PrintGreen(message):
     set_cmd_text_color(FOREGROUND_GREEN)
-    sys.stdout.write(mess + '\n')
+    sys.stdout.write(message + '\n')
     resetColor()
 
-def PrintRed(mess):
+def PrintRed(message):
     set_cmd_text_color(FOREGROUND_RED)
-    sys.stdout.write(mess + '\n')
+    sys.stdout.write(message + '\n')
     resetColor()
 
-def PrintYellow(mess):
+def PrintYellow(message):
     set_cmd_text_color(FOREGROUND_YELLOW)
-    sys.stdout.write(mess + '\n')
+    sys.stdout.write(message + '\n')
+    resetColor()
+
+def PrintBlue(message):
+    set_cmd_text_color(FOREGROUND_BLUE)
+    sys.stdout.write(message + '\n')
     resetColor()
 
 # Private
@@ -40,7 +45,8 @@ def set_cmd_text_color(color, handle=std_out_handle):
 def resetColor():
     set_cmd_text_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE)
 
-if __name__ == '__main__':
-    PrintGreen('printGreen:Gree Color Text')
-    PrintRed('printRed:Red Color Text')
-    PrintYellow('printYellow:Yellow Color Text')
+if __name__ == "__main__":
+    PrintGreen("PrintGreen.")
+    PrintRed("PrintRed.")
+    PrintYellow("PrintYellow.")
+    PrintBlue("PrintYellow.")

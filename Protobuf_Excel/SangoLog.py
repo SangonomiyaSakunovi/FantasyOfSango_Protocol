@@ -1,5 +1,5 @@
 import time
-from LogColor import PrintGreen, PrintRed, PrintYellow
+from LogColor import PrintGreen, PrintRed, PrintYellow, PrintBlue
 
 # Developer: SangonomiyaSakunovi
 
@@ -7,6 +7,10 @@ from LogColor import PrintGreen, PrintRed, PrintYellow
 def LogInfo(message):
     logString = getLogString(message)
     print(logString)
+
+def LogProcessing(message):
+    logString = getLogString(message)
+    PrintBlue(logString)
 
 def LogDone(message):
     logString = getLogString(message)
@@ -26,8 +30,9 @@ def getLogString(message):
     string = currentTime + " >> " + message
     return string
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     LogInfo("Info message.")
+    LogProcessing("Processing message.")
     LogDone("Done message.")
     LogWarn("Warn message.")
     LogError("Error message.")

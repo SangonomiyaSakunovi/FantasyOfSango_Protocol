@@ -1,7 +1,17 @@
 syntax = "proto3";
 package SangoResProtocol;
 
+message MissionConfigList{
+    repeated MissionConfig Lst = 1;
+}
+
 message MissionConfig{
     int32 Id = 1;
     string Name = 2;
+    repeated Reward Reward = 3;
+}
+
+message Reward{
+    int32 Id = 1;
+    int32 Num = 2;
 }

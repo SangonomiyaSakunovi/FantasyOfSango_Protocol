@@ -1,23 +1,23 @@
 {
     "jsonPath":[
-        "E:/FantasyOfSango/FantasyOfSango_Libs/Protobuf_Excel/output/jsons/"
+        "E:/FantasyOfSango/FantasyOfSango_Protocol/Protobuf_Excel/output/jsons/"
     ],
     "bytesPath":[
-        "E:/FantasyOfSango/FantasyOfSango_Libs/Protobuf_Excel/output/bytes/"
+        "E:/FantasyOfSango/FantasyOfSango_Protocol/Protobuf_Excel/output/bytes/"
     ],
     "csPath":[
-        "E:/FantasyOfSango/FantasyOfSango_Libs/Protobuf_Excel/output/cs/"
+        "E:/FantasyOfSango/FantasyOfSango_Protocol/Protobuf_Excel/output/csharp/"
     ],
     "cs": "ResProtocol.cs",
     "proto": "ResProtocol",
     "ignore": "备注",
-    "titleRow": 1,
-    "startRow": 2,
-    "xlsx":[
+    "titleRowNum": 1,
+    "startRowNum": 2,
+    "xls":[
         {
             "structure": "MissionConfigList",
             "files":[
-                "MissionConfig.xlsx"
+                "MissionConfig.xls"
             ],
             "keepArray": false,
             "ConvertJson": true,
